@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <input type="radio" name="gender" id="" value="남" /> 남자 <input type="radio" name="gender" id="" value="여" /> 여자
+    </form>
+    <script>
+      // 라디오를 클릭하면 해당값이 콘솔창에 뜨게 함
+      // const genders = document.querySelectorAll("input[name='gender']");
+
+      // genders.forEach((g) => {
+      //   g.addEventListener("click", (e) => {
+      //     console.log(e.target.value);
+      //   });
+      // });
+
+      // 이벤트 버블링
+      // 자식요소의 클릭 이벤트가 부모요소한테 전달되는 걸 이용
+
+      // 간단한 코드에 위와 똑같은 결과
+      const form = document.querySelector("form");
+      form.addEventListener("click", (e) => {
+        console.log(e.target.value);
+
+        // e.target : 이벤트가 발생한 실제 대상 (자식)
+        // e.currentTarget : 이벤트 버블링으로 이벤트가 발생한 모든 요소 (자식 + 부모)
+        console.log("currentTarget ", e.currentTarget.value);
+      });
+    </script>
+  </body>
+</html>

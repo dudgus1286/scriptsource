@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 5000px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      window.addEventListener("scroll", () => {
+        // 스크롤 세로좌표 출력
+        // console.log(window.scrollY);
+
+        // 100 픽셀만큼 강제이동
+        // window.scrollTo(0, 100);
+        // console.log(window.scrollY);
+
+        // 현재 스크롤 위치에서 시작해서 움직임
+        window.scrollBy(0, 500);
+        console.log(window.scrollY);
+      });
+    </script>
+  </body>
+</html>
