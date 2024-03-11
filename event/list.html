@@ -51,6 +51,18 @@
       // 배열, 배열 안 객체 불려오기
       console.log(products[1]); // {id: 1, price: 50000, title: 'Springfild Shirt'}
       console.log(products[1].title); // Springfild Shirt
+
+      // products의 값들을 화면에 출력
+      // 디자인 영역 가져오기 => products 값 삽입
+      const cards = document.querySelectorAll(".card");
+      cards.forEach((card, idx) => {
+        console.log(card, " ", idx);
+        console.log(card.querySelector("h5").innerHTML);
+        console.log(card.querySelector("span").innerHTML);
+
+        card.querySelector("h5").innerHTML = products[idx].title;
+        card.querySelector("p > span").innerHTML = products[idx].price;
+      });
     </script>
   </body>
 </html>
